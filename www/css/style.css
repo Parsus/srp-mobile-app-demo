@@ -1,1 +1,11 @@
 /* Empty. Add your own CSS if you like */
+
+.chart-wrapper {
+ position: relative;
+    padding-bottom: 40%;
+}
+
+.chart-inner {
+position: absolute;
+    width: 90%; height: 100%;
+}

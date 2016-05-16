@@ -5,20 +5,29 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
+  <!-- Home Tab -->
+  <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/home">
+    <ion-nav-view name="tab-home"></ion-nav-view>
   </ion-tab>
 
-  <!-- Chats Tab -->
-  <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
+  <!-- Pay Bill Tab -->
+  <ion-tab title="Pay Bill" icon-off="ion-social-usd-outline" icon-on="ion-social-usd" href="#/tab/paybill">
+    <ion-nav-view name="tab-paybill"></ion-nav-view>
   </ion-tab>
 
-  <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
+  <!-- Outages Tab -->
+  <ion-tab title="Outages" icon-off="ion-ios-bolt-outline" icon-on="ion-ios-bolt" href="#/tab/outages">
+    <ion-nav-view name="tab-outages"></ion-nav-view>
   </ion-tab>
 
+  <!-- Usage Tab -->
+  <ion-tab title="Usage" icon-off="ion-stats-bars" icon-on="ion-stats-bars" href="#/tab/usage">
+    <ion-nav-view name="tab-usage"></ion-nav-view>
+  </ion-tab>
+
+  <!-- More Tab -->
+  <ion-tab title="More" icon-off="ion-ios-more-outline" icon-on="ion-ios-more" href="#/tab/more">
+    <ion-nav-view name="tab-more"></ion-nav-view>
+  </ion-tab>
 
 </ion-tabs>
