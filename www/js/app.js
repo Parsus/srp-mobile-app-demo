@@ -40,46 +40,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.home', {
+    url: '/home',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-home': {
+        templateUrl: 'templates/tab-home.html',
+        controller: 'HomeCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.paybill', {
+      url: '/paybill',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-paybill': {
+          templateUrl: 'templates/tab-paybill.html',
+          controller: 'PayBillCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.outages', {
+    url: '/outages',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-outages': {
+        templateUrl: 'templates/tab-outages.html',
+        controller: 'OutagesCtrl'
+      }
+    }
+  })
+
+  .state('tab.usage', {
+    url: '/usage',
+    views: {
+      'tab-usage': {
+        templateUrl: 'templates/tab-usage.html',
+        controller: 'UsageCtrl'
+      }
+    }
+  })
+
+  .state('tab.more', {
+    url: '/more',
+    views: {
+      'tab-more': {
+        templateUrl: 'templates/tab-more.html',
+        controller: 'MoreCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });
