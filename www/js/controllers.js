@@ -55,7 +55,17 @@ angular.module('starter.controllers', [])
 
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
 
-    var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    loadMap(position.coords.latitude, position.coords.longitude);
+
+
+  }, function(error){
+    // SRP office
+    loadMap(33.4463734,-111.9542563);
+  });
+
+  function loadMap(latitude, longitude) {
+
+    var latLng = new google.maps.LatLng(latitude, longitude);
 
     var mapOptions = {
       center: latLng,
@@ -84,10 +94,7 @@ angular.module('starter.controllers', [])
 
       $ionicLoading.hide();
     });
-
-  }, function(error){
-    console.log("Could not get location");
-  });
+  }
 })
 
 .controller('MoreCtrl', function($scope, $stateParams, Chats) {
