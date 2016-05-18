@@ -13,7 +13,7 @@ For example, to start a new Ionic project with the default tabs interface, make 
 $ npm install -g ionic
 ```
 
-Then run: 
+Then run:
 
 ```bash
 $ ionic start myProject tabs
@@ -23,3 +23,19 @@ More info on this can be found on the Ionic [Getting Started](http://ionicframew
 
 ## Issues
 Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+
+## To setup local environment
+```bash
+$ npm install -g ionic cordova bower
+$ npm install
+$ bower install
+```
+## To run on local web server
+```bash
+$ ionic serve
+```
+
+## To run on emulator/device
+```bash
+$ ionic run [android|ios]
+```
