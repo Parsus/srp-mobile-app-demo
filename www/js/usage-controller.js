@@ -15,4 +15,6 @@ angular.module('starter')
     }
     windDataJSON.sort(function(a,b) { return a[0] - b[0]; });
     $scope.data = windDataJSON;
+
+    $scope.type = 'hourly';
 });

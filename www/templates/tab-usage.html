@@ -3,10 +3,10 @@
     <!-- <hc-chart options="chartOptions">Placeholder for generic chart</hc-chart>
     <hc-pie-chart title="Browser usage" data="pieData">Placeholder for pie chart</hc-pie-chart> -->
 
-    <div class="clear-button-bar">
-        <a href="#/tab/usage" class="clear-button clear-button-first clear-button-active">Hourly</a>
-        <a href="#tab2" class="clear-button clear-button-middle">Daily</a>
-        <a href="#tab3" class="clear-button clear-button-last">Monthly</a>
+    <div class="button-bar">
+        <a href="#/tab/usage" class="button button-positive" data-ng-class="{'button-outline':type !== 'hourly'}" data-ng-click="type = 'hourly'">Hourly</a>
+        <a class="button button-outline button-positive" data-ng-class="{'button-outline':type !== 'daily'}" data-ng-click="type = 'daily'">Daily</a>
+        <a class="button button-outline button-positive" data-ng-class="{'button-outline':type !== 'monthly'}" data-ng-click="type = 'monthly'">Monthly</a>
     </div>
 
     <div class="chart-wrapper">
