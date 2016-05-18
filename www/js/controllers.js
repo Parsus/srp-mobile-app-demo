@@ -17,10 +17,14 @@ angular.module('starter.controllers', [])
   // };
 })
 
-.controller('OutagesCtrl', function($scope, $cordovaGeolocation) {
+.controller('OutagesCtrl', function($scope, $cordovaGeolocation, $ionicLoading) {
 
   // see http://www.joshmorony.com/integrating-google-maps-with-an-ionic-application/
   var options = {timeout: 10000, enableHighAccuracy: true};
+
+  $ionicLoading.show({
+    template: 'Loading...'
+  });
 
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
 
@@ -51,6 +55,7 @@ angular.module('starter.controllers', [])
           infoWindow.open($scope.map, marker);
       });
 
+      $ionicLoading.hide();
     });
 
   }, function(error){
